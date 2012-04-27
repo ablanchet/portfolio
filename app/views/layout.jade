@@ -1,0 +1,28 @@
+!!! 5
+html
+	head
+		title Antoine Blanchet - Portfolio
+		link(href='/css/reset.css', rel='Stylesheet')
+		link(href='/css/layout.css', rel='Stylesheet')
+	body
+		aside
+			img(src='/img/portfolio.png', alt='me')
+			div.me
+				h1 Antoine Blanchet
+				h2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at arcu at urna volutpat facilisis.</h2>
+			nav
+				ul
+					li
+						a(href='/') Accueil
+					li
+						a(href='/competences') Compétences
+					li
+						a(href='/experiences') Expériences
+					li
+						a(href='/realisations') Réalisations
+					li.labs
+						a(href='/labs') Labs
+		section
+			header
+				h3= pageTitle
+			article!= body
