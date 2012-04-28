@@ -32,13 +32,18 @@ app.get('/', function(req, res){
     pageTitle: 'Accueil'
   });
 });
-app.get('/competences', function(req, res){
-  res.render('competences', {
+app.get('/about', function(req, res){
+  res.render('about', {
+    pageTitle: 'A propos'
+  });
+});
+app.get('/skills', function(req, res){
+  res.render('skills', {
     pageTitle: 'Compétences'
   });
 });
-app.get('/realisations', function(req, res){
-  res.render('realisations', {
+app.get('/accomplishments', function(req, res){
+  res.render('accomplishments', {
     pageTitle: 'Réalisations'
   });
 });
