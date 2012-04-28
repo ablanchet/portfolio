@@ -47,12 +47,26 @@ app.get('/accomplishments', function(req, res){
     pageTitle: 'Réalisations'
   });
 });
-app.get('/experiences', function(req, res){
-  res.render('experiences', {
-    pageTitle: 'Expériences'
-  });
+app.get('/experiences', function (req, res) {
+    res.render('experiences', {
+        pageTitle: 'Expériences'
+    });
 });
-
+app.get('/labs', function (req, res) {
+    res.render('labs', {
+        pageTitle: 'Labs'
+    });
+});
+app.get('/labs/:labname', function (req, res) {
+    res.render('labs/' + req.params.labname, {
+        pageTitle: 'Lab : ' + req.params.labname
+    });
+});
+app.use(function (req, res) {
+    res.render('notfound', {
+        pageTitle: 'Oups'
+    });
+});
 // Only listen on $ node app.js
 
 if (!module.parent) {
