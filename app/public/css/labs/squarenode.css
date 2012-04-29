@@ -1,0 +1,31 @@
+﻿article
+{
+	padding: 0;
+}
+#squares
+{
+	height: 800px;
+}
+.square
+{
+	position: absolute;
+	width: 150px;
+	height: 150px;
+}
+.square p
+{
+	width: auto;
+	color: White;
+	text-align: center;
+	font-weight: bold;
+	margin-top: 60px;
+}
+.square.mine
+{
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	z-index: 1000;
+	cursor: move;
+}
