@@ -20,7 +20,7 @@
 	height: 100%;
 	
 	background-image: url(/img/parallax/bg.png); /* fallback */
-	background-repeat: no-repeat;
+	background-repeat: repeat-x;
 	background-position: left center;
 	
 	-webkit-background-size: cover;
@@ -37,6 +37,7 @@
 .contents
 {	
 	position: absolute;
+	width: 3000px;
 	
 	left: 0;
 	bottom: 0;
@@ -53,7 +54,7 @@
 	
 	width: 600px;
 	height: 300px;
-	margin: 0 0 10px 30px;
+	margin: 0 0 30px 30px;
 	opacity: 0.6;
 	border-radius: 5px;
 	

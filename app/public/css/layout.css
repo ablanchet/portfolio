@@ -1,4 +1,6 @@
-﻿::-moz-selection { background: red; color: #fff; text-shadow: none; }
+﻿@import url(http://fonts.googleapis.com/css?family=Raleway:100);
+
+::-moz-selection { background: red; color: #fff; text-shadow: none; }
 ::selection { background: red; color: #fff; text-shadow: none; }
 body {
 	color: black;
@@ -60,16 +62,15 @@ aside .me h1
 }
 aside .me h2
 {
-	font-family: 'QuicksandLight';
-	font-weight: lighter;
+	font-family: 'Raleway', cursive;
 	margin: 0;
 	margin-top: 0;
 	font-size: 18px;
 	line-height: 25px;
-	color: #585C60;
+	color: #999;
 	text-transform: none;
-	margin: 0 15px;
-	text-align: center;
+	letter-spacing: 1px;
+	margin: 0 44px;
 }
 section
 {
