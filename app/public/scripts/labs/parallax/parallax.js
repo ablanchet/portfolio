@@ -4,28 +4,32 @@
 
     var _itemsCount;
     var _currentItemId = 0;
-    var _itemWidth = 660;
+    var _itemWidth = 630;
     var _parallaxRatio = 0.1;
 
     var goLeft = function () {
         if (_currentItemId + 1 < _itemsCount) {
             _currentItemId++;
-            var positions = computePositions();
-            move(positions.elements, positions.background);
+            move();
         }
     };
 
     var goRigth = function () {
         if (_currentItemId > 0) {
             _currentItemId--;
-            var positions = computePositions();
-            move(positions.elements, positions.background);
+            move();
         }
     };
 
-    var move = function (elements, background) {
-        _contents.css('left', elements + 'px');
-        _bg.css('left', background + 'px');
+    var goTo = function () {
+        _currentItemId = $(this).data('id');
+        move();
+    };
+
+    var move = function () {
+        var positions = computePositions();
+        _contents.css('left', positions.elements + 'px');
+        _bg.css('left', positions.background + 'px');
     };
 
     var computePositions = function () {
@@ -38,6 +42,7 @@
     $(function () {
         $('.goleft').click(goLeft);
         $('.gorigth').click(goRigth);
+        $('.content').click(goTo);
 
         _contents = $('.contents');
         _itemsCount = $('.content').length;
