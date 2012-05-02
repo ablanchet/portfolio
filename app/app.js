@@ -4,7 +4,10 @@
 
 var express = require('express');
 var pages = require('./pages.js');
-var squarenode = require('./squarenode.js');
+
+// Load labs modules
+var squarenode = require('./labs/squarenode.js');
+var parallax = require('./labs/parallax.js');
 
 var app = module.exports = express.createServer();
 
@@ -41,3 +44,4 @@ if (!module.parent) {
 
 // Start labs
 squarenode.start(app);
+parallax.start(app);
