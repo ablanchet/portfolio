@@ -30,9 +30,11 @@ app.configure('production', function(){
 });
 
 // Routes
-
-app.get('/:pageName?', pages.findPage, function (req, res) {
-    res.render(req.page.view, req.page.data);
+app.get('/*?', pages.findPageFromRequest, function (req, res, next) {
+    if (req.page != null) {
+        res.render(req.page.view, req.page.data);
+    }
+    else next();
 });
 
 // Only listen on $ node app.js
