@@ -4,29 +4,89 @@
         data: { pageTitle: 'Accueil' }
     },
     'about': {
-        view: 'about',
+        view: 'about/about',
         data: { pageTitle: 'A propos' },
         subpages: {
             'career': {
-                view: 'career',
+                view: 'about/career',
                 data: { pageTitle: 'Mon parcours' }
             }
         }
     },
     'skills': {
-        view: 'skills',
-        data: { pageTitle: 'Compétences' }
+        view: 'skills/skills',
+        data: { pageTitle: 'Compétences' },
+        subpages: {
+            'needs': {
+                view: 'skills/needs',
+                data: { pageTitle: 'Compétences' }
+            },
+            'help': {
+                view: 'skills/help',
+                data: { pageTitle: 'Compétences' }
+            },
+            'design': {
+                view: 'skills/design',
+                data: { pageTitle: 'Compétences' }
+            },
+            'drive': {
+                view: 'skills/drive',
+                data: { pageTitle: 'Compétences' }
+            },
+            'realize': {
+                view: 'skills/realize',
+                data: { pageTitle: 'Compétences' }
+            },
+            'train': {
+                view: 'skills/train',
+                data: { pageTitle: 'Compétences' }
+            }
+        }
     },
     'references': {
         view: 'references',
         data: { pageTitle: 'Références' }
     },
     'experiences': {
-        view: 'experiences',
-        data: { pageTitle: 'Expériences' }
+        view: 'experiences/experiences',
+        data: { pageTitle: 'Expériences' },
+        subpages: {
+            'civikey': {
+                view: 'experiences/civikey',
+                data: { pageTitle: 'CiviKey' }
+            },
+            'beapart': {
+                view: 'experiences/beapart',
+                data: { pageTitle: 'BeApart' }
+            },
+            'whirlpool': {
+                view: 'experiences/whirlpool',
+                data: { pageTitle: 'Whirlpool' }
+            },
+            'martini': {
+                view: 'experiences/martini',
+                data: { pageTitle: 'Martini' }
+            },
+            'esiea': {
+                view: 'experiences/esiea',
+                data: { pageTitle: 'Esiea (Candidature en ligne)' }
+            },
+            'talentsoft': {
+                view: 'experiences/talentsoft',
+                data: { pageTitle: 'TalentSoft' }
+            },
+            'windows-campus-program': {
+                view: 'experiences/windowscampusprogram',
+                data: { pageTitle: 'Windows Campus Program' }
+            },
+            'invenietis': {
+                view: 'experiences/invenietis',
+                data: { pageTitle: 'Invenietis' }
+            }
+        }
     },
     'labs': {
-        view: 'labs',
+        view: 'labs/labs',
         data: { pageTitle: 'Labs' }
     }
 };

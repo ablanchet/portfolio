@@ -112,6 +112,15 @@ section header
 	padding: 30px;
 	padding-left: 50px;
 }
+section footer
+{
+	padding: 40px;
+	padding-bottom: 60px;
+	padding-left: 50px;
+	padding-right: 50px;
+	border-top: 1px solid #E2E2E2;
+	position: relative;
+}
 section article
 {
 	padding: 40px;
