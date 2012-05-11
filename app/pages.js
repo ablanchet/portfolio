@@ -5,7 +5,7 @@
     },
     'about': {
         view: 'about/about',
-        data: { pageTitle: 'A propos' },
+        data: { pageTitle: 'À propos' },
         subpages: {
             'career': {
                 view: 'about/career',
@@ -15,31 +15,31 @@
     },
     'skills': {
         view: 'skills/skills',
-        data: { pageTitle: 'Compétences' },
+        data: { pageTitle: 'Mes compétences' },
         subpages: {
             'needs': {
                 view: 'skills/needs',
-                data: { pageTitle: 'Compétences' }
+                data: { pageTitle: 'Mes compétences' }
             },
             'help': {
                 view: 'skills/help',
-                data: { pageTitle: 'Compétences' }
+                data: { pageTitle: 'Mes compétences' }
             },
             'design': {
                 view: 'skills/design',
-                data: { pageTitle: 'Compétences' }
+                data: { pageTitle: 'Mes compétences' }
             },
             'drive': {
                 view: 'skills/drive',
-                data: { pageTitle: 'Compétences' }
+                data: { pageTitle: 'Mes compétences' }
             },
             'realize': {
                 view: 'skills/realize',
-                data: { pageTitle: 'Compétences' }
+                data: { pageTitle: 'Mes compétences' }
             },
             'train': {
                 view: 'skills/train',
-                data: { pageTitle: 'Compétences' }
+                data: { pageTitle: 'Mes compétences' }
             }
         }
     },

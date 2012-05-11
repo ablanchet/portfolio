@@ -1,6 +1,8 @@
 ﻿/**
  * Module dependencies.
  */
+var cluster = require('cluster');
+var numCpus = require('os').cpus().length;
 
 var express = require('express');
 var pages = require('./pages.js');
@@ -9,7 +11,7 @@ var pages = require('./pages.js');
 var squarenode = require('./labs/squarenode.js');
 var parallax = require('./labs/parallax.js');
 
-var app = module.exports = express.createServer();
+var app = express.createServer();
 
 // Configuration
 
@@ -37,13 +39,24 @@ app.get('/*?', pages.findPageFromRequest, function (req, res, next) {
     else next();
 });
 
-// Only listen on $ node app.js
+if (cluster.isMaster) {
+    console.log('Application started, clustered with %d processors', numCpus);
+    
+    // Fork workers
+    for (var i = 0; i < numCpus; i++) {
+        cluster.fork();
+    }
+    cluster.on('death', function (w) {
+        console.log('worker ' + w.pid + ' died');
+        cluster.fork();
+    });
+} else {
+    console.log('Worker %d started', process.env.NODE_WORKER_ID);
+    
+    // Start web application
+    app.listen(9451);
 
-if (!module.parent) {
-  app.listen(9451);
-  console.log("Express server listening on port %d", app.address().port);
+    // Start labs
+    squarenode.start(app);
+    parallax.start(app);   
 }
-
-// Start labs
-squarenode.start(app);
-parallax.start(app);

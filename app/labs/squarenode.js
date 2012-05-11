@@ -10,6 +10,19 @@ var _socket;
 var _clients = {};
 
 var init = function (socket) {
+    socket.configure('production', function () {
+        socket.enable('browser client etag');
+        socket.set('log level', 1);
+
+        socket.set('transports', [
+            'websocket'
+          , 'flashsocket'
+          , 'htmlfile'
+          , 'xhr-polling'
+          , 'jsonp-polling'
+        ]);
+    });
+
     _socket = socket.of('/square');
     _socket.on('connection', onNewClient);
 };
