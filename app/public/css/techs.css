@@ -1,0 +1,48 @@
+﻿.techs .tech
+{ 
+	padding: 10px; 
+	text-align: center; 
+	background: #F8F8F8;
+	box-shadow:0px 0px 8px rgba(0,0,0,0.2);
+	border-radius: 2px;
+	margin: 10px 5px;
+}
+
+.techs .section
+{ 
+	float: left;
+	display: inline-block; 
+	margin: 10px 0;
+	padding: 0 10px;
+}
+.techs .section .title
+{
+	clear: both;
+	padding-bottom: 10px;
+	text-align: center;
+}
+.borders{ border-left: 1px solid lightgrey; border-right: 1px solid lightgrey;}
+
+span{ display: inline-block; margin: 0; padding: 8px 0 0 0;  }
+
+.left{ float: left; clear: none; margin: 0; }
+.clear{ clear: both; }
+
+.sql{ float: left; height: 90px; position: relative; top: 60px;}
+.nosql{ float: left; height: 90px; position: relative; top: 60px;}
+.sql span{ padding-top: 35px;}
+.nosql span{ padding-top: 35px; }
+.mvc{ float: left; height: 30px; position: relative; top: 60px;}
+.webforms{ float: left; height: 30px; position: relative; top: 60px;}
+.c1{ height: 30px; position: relative; top: 60px;}
+.c2{ height: 30px; }
+.wpf{ height: 30px; }
+.mvvm{ height: 30px; }
+.js{ height: 30px; }
+.frameworks{ height: 30px; }
+.jquery{ height: 30px; }
+.ext{ height: 30px; }
+.html5{ height: 30px; position: relative; top: 60px;}
+.css3{ height: 30px; position: relative; top: 60px;}
+
+.git{ width: 800px; clear: both; }
