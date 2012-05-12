@@ -53,35 +53,35 @@
         subpages: {
             'civikey': {
                 view: 'experiences/civikey',
-                data: { pageTitle: 'CiviKey' }
+                data: { pageTitle: 'Expérience' }
             },
             'beapart': {
                 view: 'experiences/beapart',
-                data: { pageTitle: 'BeApart' }
+                data: { pageTitle: 'Expérience' }
             },
             'whirlpool': {
                 view: 'experiences/whirlpool',
-                data: { pageTitle: 'Whirlpool' }
+                data: { pageTitle: 'Expérience' }
             },
             'martini': {
                 view: 'experiences/martini',
-                data: { pageTitle: 'Martini' }
+                data: { pageTitle: 'Expérience' }
             },
             'esiea': {
                 view: 'experiences/esiea',
-                data: { pageTitle: 'Esiea (Candidature en ligne)' }
+                data: { pageTitle: 'Expérience' }
             },
             'talentsoft': {
                 view: 'experiences/talentsoft',
-                data: { pageTitle: 'TalentSoft' }
+                data: { pageTitle: 'Expérience' }
             },
             'windows-campus-program': {
                 view: 'experiences/windowscampusprogram',
-                data: { pageTitle: 'Windows Campus Program' }
+                data: { pageTitle: 'Expérience' }
             },
             'invenietis': {
                 view: 'experiences/invenietis',
-                data: { pageTitle: 'Invenietis' }
+                data: { pageTitle: 'Expérience' }
             }
         }
     },

@@ -37,6 +37,7 @@ h3
 {
 	font-weight: 800;
 	font-size: 1.2em;
+	text-transform: uppercase;	
 }
 p
 {
@@ -129,7 +130,7 @@ section article
 	position: relative;
 	overflow: hidden;
 }
-section article p, section article h2
+section article p, section article h2, section article h3
 {
 	width: 500px;
 }

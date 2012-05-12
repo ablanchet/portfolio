@@ -1,23 +1,44 @@
-﻿.techs .tech
-{ 
+﻿.tech
+{
+	display: inline-block;
+	
+	position: absolute; 
+	top: 0;
+	left: 0;
+	
+	height: 30px;
+	
 	padding: 10px; 
 	text-align: center; 
 	background: #F8F8F8;
-	box-shadow:0px 0px 8px rgba(0,0,0,0.2);
+	box-shadow:0px 0px 3px rgba(0,0,0,0.3);
 	border-radius: 2px;
 	margin: 10px 5px;
+	border: 1px solid lightgray;
+	
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+.tech:hover
+{
+	-moz-transform:scale(1.05);
+	-webkit-transform:scale(1.05);
+	-o-transform:scale(1.05);
+	
+	box-shadow:0px 1px 10px rgba(0,0,0,0.3);
 }
 
-.techs .section
-{ 
-	float: left;
-	display: inline-block; 
-	margin: 10px 0;
-	padding: 0 10px;
-}
-.techs .section .title
+.section
 {
-	clear: both;
+	width: 500px;
+	position: relative;
+	margin: 10px 0;
+}
+.section .title
+{
 	padding-bottom: 10px;
 	text-align: center;
 }
@@ -25,24 +46,27 @@
 
 span{ display: inline-block; margin: 0; padding: 8px 0 0 0;  }
 
-.left{ float: left; clear: none; margin: 0; }
-.clear{ clear: both; }
+.server{ height: 220px; }
+.sql{ height: 90px; width: 55px;}
+.nosql{ height: 90px; width: 45px;}
+.sql span, .nosql span{ padding-top: 35px;}
+.server .git{ top: 120px; width: 470px; }
+.server .nosql{ left: 85px; }
+.server .c{ left: 160px; top: 60px; width: 310px;}
+.server .mvc{ left: 160px; width: 180px;}
+.server .webforms{ left: 370px; width: 100px;}
 
-.sql{ float: left; height: 90px; position: relative; top: 60px;}
-.nosql{ float: left; height: 90px; position: relative; top: 60px;}
-.sql span{ padding-top: 35px;}
-.nosql span{ padding-top: 35px; }
-.mvc{ float: left; height: 30px; position: relative; top: 60px;}
-.webforms{ float: left; height: 30px; position: relative; top: 60px;}
-.c1{ height: 30px; position: relative; top: 60px;}
-.c2{ height: 30px; }
-.wpf{ height: 30px; }
-.mvvm{ height: 30px; }
-.js{ height: 30px; }
-.frameworks{ height: 30px; }
-.jquery{ height: 30px; }
-.ext{ height: 30px; }
-.html5{ height: 30px; position: relative; top: 60px;}
-.css3{ height: 30px; position: relative; top: 60px;}
+.light{ height: 220px; }
+.light .git{ top: 120px; width: 470px; }
+.light .html5{ width: 80px; height: 90px; }
+.light .css3{ left: 110px; width: 80px; height: 90px; }
+.html5 span, .css3 span{ padding-top: 35px;}
+.light .js{ left: 220px; top: 60px; width: 250px;}
+.light .frameworks{ left: 220px; width: 250px;}
 
-.git{ width: 800px; clear: both; }
+.heavy{ height: 280px; }
+.heavy .git{ top: 180px; width: 470px; }
+.heavy .c{ top: 120px; width: 470px; }
+.heavy .mvvm{ top: 60px; width: 470px; }
+.heavy .wpf{ width: 351px; }
+.heavy .wf{ left: 380px; width: 89px; }
