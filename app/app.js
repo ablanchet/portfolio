@@ -6,10 +6,7 @@ var numCpus = require('os').cpus().length;
 
 var express = require('express');
 var pages = require('./pages.js');
-
-// Load labs modules
-var squarenode = require('./labs/squarenode.js');
-var parallax = require('./labs/parallax.js');
+var labs = require('./labsloader.js');
 
 var app = express.createServer();
 
@@ -55,7 +52,6 @@ if (cluster.isMaster) {
     // Start web application
     app.listen(9451);
 
-    // Start labs
-    squarenode.start(app);
-    parallax.start(app);   
+    // Load and start labs
+    labs.loadandstart(app);
 }

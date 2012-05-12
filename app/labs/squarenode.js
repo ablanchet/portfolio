@@ -79,9 +79,9 @@ var iterateClients = function (action, except) {
     }
 };
 
+// Exports
+module.exports.name = 'Squarenode';
 module.exports.start = function (expressServer) {
-    console.log('SquareNode is running.');
-
     // Extend routes
     expressServer.get('/labs/squarenode', function (req, res) {
         res.render('labs/squarenode', {
