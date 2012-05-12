@@ -1,0 +1,18 @@
+!!! 5
+html
+	head
+		title Antoine Blanchet - Portfolio
+		link(href='/css/reset.css', rel='Stylesheet')
+		link(href='/fonts/fontface.css', rel='Stylesheet')
+		link(href='/css/layout.css', rel='Stylesheet')
+		style(type='text/css')
+			section{ margin: 0; border: 0; }
+			h3{ display: inline-block; margin-left: 20px; }
+			header{ border-bottom: 1px solid #E2E2E2; }
+		script(src='//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js',type='text/javascript')
+	body
+		section
+			header
+				a(href='/labs').button Retour aux labs
+				h3= pageTitle
+			div!=body
