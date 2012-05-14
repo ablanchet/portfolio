@@ -1,5 +1,6 @@
 ﻿.wrapper
 {
+	position: relative;
 	margin-top: 100px;
 	height: 364px;
 	overflow: hidden;
@@ -9,6 +10,26 @@
 	position: relative;
 	/* Enough to contain 3 .page */
 	width: 11886px;
+}
+.navleft
+{
+	position: absolute;
+	left: 0px;
+	z-index: 1000;
+	width: 25%;
+	height: 100%;
+	background: red;
+	opacity: 0.2;
+}
+.navright
+{
+	position: absolute;
+	right: 0px;
+	z-index: 1000;
+	width: 25%;
+	height: 100%;
+	background: red;
+	opacity: 0.2;
 }
 .page
 {
@@ -29,6 +50,7 @@
 	margin: 30px;
 	background: grey;
 }
-.p1{ left: 0; }
-.p2{ left: 3960px; }
-.p3{ left: 7920px; }
+/* default positions of the pages */
+.p1{ left: -3960px; }
+.p2{ left: 0; }
+.p3{ left: 3960px; }
