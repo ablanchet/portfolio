@@ -10,17 +10,38 @@
         return _container.children('.page');
     };
 
+    var _stop = function () {
+        var pages = _getPages();
+        pages.stop();
+
+        var p1 = $(pages[0]);
+        var p2 = $(pages[1]);
+        var p3 = $(pages[2]);
+
+        var l1 = Math.round(p1.position().left);
+        //        var l2 = Math.round(p2.position().left);
+        //        var l3 = Math.round(p3.position().left);
+
+        //        console.log(l1);
+        //        console.log(l2);
+        //        console.log(l3);
+
+        p1.css({ left: l1 });
+        p2.css({ left: l1 + _pagewidth });
+        p3.css({ left: l1 + (_pagewidth * 2) });
+    };
+
     var _changeDirection = function (direction) {
         if (direction != _currentdirection) {
             _currentdirection = direction;
-            _getPages().stop();
+            _stop();
             _animatePages();
         }
     };
 
     var _bindEvents = function (elements) {
         elements.hover(function () {
-            _getPages().stop();
+            _stop();
         },
         function () {
             _animatePages();
