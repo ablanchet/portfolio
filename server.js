@@ -1,8 +1,6 @@
 ﻿/**
  * Module dependencies.
  */
-//var cluster = require('cluster');
-//var numCpus = require('os').cpus().length;
 
 var express = require('express');
 var pages = require('./pages.js');
@@ -35,23 +33,8 @@ app.get('/*?', pages.findPageFromRequest, function (req, res, next) {
     else next();
 });
 
-//if (cluster.isMaster) {
-//    console.log('Application started, clustered with %d processors', numCpus);
-//    
-//    // Fork workers
-//    for (var i = 0; i < numCpus; i++) {
-//        cluster.fork();
-//    }
-//    cluster.on('death', function (w) {
-//        console.log('worker ' + w.pid + ' died');
-//        cluster.fork();
-//    });
-//} else {
-    console.log('Worker %d started', process.env.NODE_WORKER_ID);
-    
-    // Start web application
-    app.listen(9451);
+// Start web application
+app.listen(process.env.port || 1337);
 
-    // Load and start labs
-    labs.loadandstart(app);
-//}
+// Load and start labs
+labs.loadandstart(app);
