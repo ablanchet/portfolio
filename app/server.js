@@ -34,7 +34,7 @@ app.get('/*?', pages.findPageFromRequest, function (req, res, next) {
 });
 
 // Start web application
-app.listen(process.env.port || 1337);
+app.listen(process.env.PORT || 1337);
 
 // Load and start labs
 labs.loadandstart(app);
