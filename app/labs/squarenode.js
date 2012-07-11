@@ -2,7 +2,13 @@
  * Module dependencies.
  */
 
+var redis = require('redis');
 var io = require('socket.io');
+var RedisStore = require('socket.io/lib/stores/redis')
+  , pub = redis.createClient()
+  , sub = redis.createClient()
+  , client = redis.createClient();
+
 
 // SquareNode
 
@@ -22,6 +28,11 @@ var init = function (socket) {
           , 'jsonp-polling'
         ]);
     });
+    socket.set('store', new RedisStore({
+        redisPub: pub
+        , redisSub: sub
+        , redisClient: client
+    }));
 
     _socket = socket.of('/square');
     _socket.on('connection', onNewClient);
