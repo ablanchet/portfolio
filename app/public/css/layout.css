@@ -192,3 +192,14 @@ a.button:hover
 {
 	border-color: #999;
 }
+li
+{
+	font-size: 15px;
+	line-height: 20px;
+	margin: 0;
+	color: #4D4D4D;
+	display: list-item;
+	margin-bottom: 8px;
+	margin-top: 8px;
+	max-width: 500px;
+}
