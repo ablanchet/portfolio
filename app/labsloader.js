@@ -47,8 +47,10 @@ var loadLabsModules = function (labs) {
     for (var i in labs) {
         var lab = labs[i];
         try {
-            lab.start(_expressapp);
-            console.log(lab.name + ' has been started');
+            if (lab.canBeStarted()) {
+                lab.start(_expressapp);
+                console.log(lab.name + ' has been started');
+            }
         }
         catch (e) {
             console.log('Unable to start ' + lab.name + ' lab. Error : ' + e);
