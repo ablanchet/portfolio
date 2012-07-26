@@ -63,10 +63,10 @@ aside
 aside img
 {
 	width: 180px;
-	margin: 65px 0 0 40px;
+	margin: 40px 0 0 40px;
 	box-shadow: 0px 3px 10px rgba(0,0,0,0.5);
 	border: 1px solid white;
-	-moz-transform:rotate(5deg);
+	/*-moz-transform:rotate(5deg);
 	-webkit-transform:rotate(5deg);
 	-o-transform:rotate(5deg);
 	
@@ -74,13 +74,13 @@ aside img
 	-moz-transition: all 0.5s ease-in-out;
 	-o-transition: all 0.5s ease-in-out;
 	-ms-transition: all 0.5s ease-in-out;
-	transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;*/
 }
 aside img:hover
 {
-	-moz-transform:rotate(0deg);
+	/*-moz-transform:rotate(0deg);
 	-webkit-transform:rotate(0deg);
-	-o-transform:rotate(0deg);
+	-o-transform:rotate(0deg);*/
 }
 aside .me h1
 {
@@ -132,7 +132,8 @@ section article
 }
 section article p, section article h2, section article h3
 {
-	width: 500px;
+	width: 700px;
+	text-align: justify;
 }
 section article p img
 {
@@ -149,7 +150,13 @@ section article a.button
 {
 	float: left;
 	clear: left;
-	margin: 0 25px 15px 0;
+	margin: 5px 25px 15px 0;
+}
+.right
+{
+	float: right;
+	clear: right;
+	margin: 5px 0 15px 25px;
 }
 nav ul
 {
