@@ -3,6 +3,7 @@
  */
 
 var express = require('express');
+var fs = require('fs');
 var pages = require('./pages.js');
 var labs = require('./labsloader.js');
 
@@ -28,9 +29,23 @@ app.configure('production', function(){
 // Routes
 app.get('/*?', pages.findPageFromRequest, function (req, res, next) {
     if (req.page != null) {
+        req.page.data.view = req.page.view + '.jade';
         res.render(req.page.view, req.page.data);
     }
     else next();
+});
+
+app.post('/saveedition', function (req, res) {
+    var newContent = req.body.editedContent;
+    var page = __dirname + '/views/' + req.body.page;
+    var stream = fs.createWriteStream(page, { flags: 'w' });
+    console.log(stream);
+    stream.on('open', function () {
+        stream.write(newContent);
+        stream.end();
+
+        res.send({ success: true });
+    });
 });
 
 // Start web application
