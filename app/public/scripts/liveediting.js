@@ -1,9 +1,9 @@
 ﻿(function () {
     var savecontent = function (page) {
-        var content = $('article').html();
+        var content = $('article').parent().html();
         console.log('save content to ' + page);
         $.post('/saveedition', { editedContent: content, page : page }, function (res) {
-            console.log(res);
+            window.location = window.location;
         });
     };
 

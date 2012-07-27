@@ -39,7 +39,6 @@ app.post('/saveedition', function (req, res) {
     var newContent = req.body.editedContent;
     var page = __dirname + '/views/' + req.body.page;
     var stream = fs.createWriteStream(page, { flags: 'w' });
-    console.log(stream);
     stream.on('open', function () {
         stream.write(newContent);
         stream.end();
