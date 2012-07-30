@@ -40,6 +40,14 @@
             'train': {
                 view: 'skills/train',
                 data: { pageTitle: 'Mes compétences' }
+            },
+            'monitor': {
+                view: 'skills/monitor',
+                data: { pageTitle: 'Mes compétences' }
+            },
+            'animate': {
+                view: 'skills/animate',
+                data: { pageTitle: 'Mes compétences' }
             }
         }
     },

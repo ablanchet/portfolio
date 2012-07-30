@@ -1,6 +1,8 @@
 ﻿(function () {
     var savecontent = function (page) {
-        var content = $('article').parent().html();
+        $article = $('article');
+		$article.removeAttr('contenteditable');
+		var content = $article.parent().html();
         console.log('save content to ' + page);
         $.post('/saveedition', { editedContent: content, page : page }, function (res) {
             window.location = window.location;
