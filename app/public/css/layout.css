@@ -135,7 +135,7 @@ section article p, section article h2, section article h3
 	width: 700px;
 	text-align: justify;
 }
-section article p img
+section article img
 {
 	border: 1px solid white;
 	box-shadow:0px 3px 10px rgba(0,0,0,0.5);
@@ -214,3 +214,11 @@ li
 {
 	float: right;
 }
+.screenshots
+{
+	list-style-type: none;
+}
+	.screenshots img
+	{
+		margin: 10px;
+	}
