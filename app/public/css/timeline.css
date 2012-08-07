@@ -1,0 +1,48 @@
+﻿.clear
+{
+	clear: both;
+}
+.timeline
+{
+	width: 700px;
+	background: url('/img/line.png');
+	min-height: 700px;
+	padding-top: 20px;
+}
+.left, .right
+{
+	float: none;
+	margin: 0;
+	padding: 0;
+}
+.timeblock
+{
+	width: 435px;
+	border-top: 1px solid #999;
+	/*background: rgba(0,0,0,0.05);*/
+	margin: 15px 0 15px 0;
+	padding: 10px;
+	
+	font-size: 15px;
+	line-height: 25px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	color: #4D4D4D;
+	font-family: 'proxima-nova',sans-serif;
+	font-weight: 400;
+}
+.date{ font-size: 20px; }
+
+.timeblock .content{ width: 330px; }
+.timeblock.right{ margin-left: 240px; }
+.timeblock.left .date{ float: right; }
+.timeblock.right .date{ float: left; }
+.timeblock.left .content{ float: left; }
+.timeblock.right .content{ float: right; text-align: right;}
+
+.important{ border-top: 1px solid red; }
+.important .date{ color: red; }
+.itiproject{ border-top: 1px solid purple; }
+.itiproject .date{ color: purple; }
+.inv{ border-top: 1px solid #EBAE2B; }
+.inv .date{ color: #EBAE2B; }
