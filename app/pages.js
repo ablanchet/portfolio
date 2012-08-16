@@ -15,41 +15,7 @@
     },
     'skills': {
         view: 'skills/skills',
-        data: { pageTitle: 'Mes compétences' },
-        subpages: {
-            'needs': {
-                view: 'skills/needs',
-                data: { pageTitle: 'Mes compétences' }
-            },
-            'help': {
-                view: 'skills/help',
-                data: { pageTitle: 'Mes compétences' }
-            },
-            'design': {
-                view: 'skills/design',
-                data: { pageTitle: 'Mes compétences' }
-            },
-            'drive': {
-                view: 'skills/drive',
-                data: { pageTitle: 'Mes compétences' }
-            },
-            'realize': {
-                view: 'skills/realize',
-                data: { pageTitle: 'Mes compétences' }
-            },
-            'train': {
-                view: 'skills/train',
-                data: { pageTitle: 'Mes compétences' }
-            },
-            'monitor': {
-                view: 'skills/monitor',
-                data: { pageTitle: 'Mes compétences' }
-            },
-            'animate': {
-                view: 'skills/animate',
-                data: { pageTitle: 'Mes compétences' }
-            }
-        }
+        data: { pageTitle: 'Mes compétences' }
     },
     'references': {
         view: 'references',
