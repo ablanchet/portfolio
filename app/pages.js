@@ -21,6 +21,10 @@
         view: 'references',
         data: { pageTitle: 'Références' }
     },
+    'thanks': {
+        view: 'thanks',
+        data: { pageTitle: 'Remerciements' }
+    },
     'experiences': {
         view: 'experiences/experiences',
         data: { pageTitle: 'Expériences' },
