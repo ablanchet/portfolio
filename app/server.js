@@ -35,17 +35,17 @@ app.get('/*?', pages.findPageFromRequest, function (req, res, next) {
     else next();
 });
 
-app.post('/saveedition', function (req, res) {
-    var newContent = req.body.editedContent;
-    var page = __dirname + '/views/' + req.body.page;
-    var stream = fs.createWriteStream(page, { flags: 'w' });
-    stream.on('open', function () {
-        stream.write(newContent);
-        stream.end();
+ //app.post('/saveedition', function (req, res) {
+ //    var newContent = req.body.editedContent;
+ //    var page = __dirname + '/views/' + req.body.page;
+ //    var stream = fs.createWriteStream(page, { flags: 'w' });
+ //    stream.on('open', function () {
+ //        stream.write(newContent);
+ //        stream.end();
 
-        res.send({ success: true });
-    });
-});
+ //        res.send({ success: true });
+ //    });
+ //});
 
 // Start web application
 app.listen(process.env.PORT || 1337);
